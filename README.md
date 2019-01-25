@@ -1,2 +1,1 @@
-# online-shop
-Game57 Online Shop
+# Game57 Online Shop
