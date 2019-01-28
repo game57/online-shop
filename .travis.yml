@@ -4,8 +4,8 @@ cache: bundler
 
 before_install:
   # Use Bundler 2
-  - gem update --system
-  - gem install bundler
+  - gem update --system --no-document
+  - gem install bundler --no-document
 
 before_script:
   - bundle exec rails db:setup
