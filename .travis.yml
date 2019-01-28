@@ -1,0 +1,21 @@
+language: ruby
+
+cache: bundler
+
+before_install:
+  # Use Bundler 2
+  - gem update --system
+  - gem install bundler
+
+before_script:
+  - bundle exec rails db:setup
+
+script:
+  - bundle exec rails test
+
+branches:
+  only:
+    - master
+
+notifications:
+  email: false
