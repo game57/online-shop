@@ -1,5 +1,18 @@
 {
   "name": "online-shop",
   "private": true,
-  "dependencies": {}
+  "dependencies": {},
+  "stylelint": {
+    "rules": {
+      "at-rule-no-unknown": [
+        true,
+        {
+          "ignoreAtRules": [
+            "mixin",
+            "include"
+          ]
+        }
+      ]
+    }
+  }
 }
