@@ -1,0 +1,4 @@
+rules:
+  - id: game57.no_data_migration_in_schema_migration
+    pattern: User
+    message: No data migration in schema migration.

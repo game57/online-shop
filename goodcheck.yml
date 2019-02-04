@@ -1,0 +1,4 @@
+rules:
+  - id: game57.sign_in
+    pattern: Login
+    message: Use "Sign in" instead of "Login"

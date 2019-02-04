@@ -1,0 +1,26 @@
+<% content_for :title, "Sign in" %>
+
+<h1>Log in</h1>
+
+<%= form_with(url: sign_in_path, local: true) do |form| %>
+  <% if alert %>
+    <div id="error_explanation">
+      <%= alert %>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :email %>
+    <%= form.email_field :email %>
+  </div>
+
+  <div class="field">
+    <%= form.label :password %>
+    <%= form.password_field :password %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit "Sign in" %>
+    <%= link_to "or sign up", sign_up_path %>
+  </div>
+<% end %>
