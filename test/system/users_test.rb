@@ -10,24 +10,22 @@ class UsersTest < ApplicationSystemTestCase
     assert_selector "h1", text: "Users"
   end
 
-  test "creating a User" do
-    visit users_url
-    click_on "New User"
+  test "signing up" do
+    visit sign_up_url
 
-    fill_in "Email", with: @user.email
+    fill_in "Email", with: "foo@example.com"
     fill_in "Password", with: 'secret'
     fill_in "Password confirmation", with: 'secret'
-    click_on "Create User"
+    click_on "Sign up"
 
     assert_text "User was successfully created"
-    click_on "Back"
   end
 
   test "updating a User" do
     visit users_url
     click_on "Edit", match: :first
 
-    fill_in "Email", with: @user.email
+    fill_in "Email", with: "foo@example.com"
     fill_in "Password", with: 'secret'
     fill_in "Password confirmation", with: 'secret'
     click_on "Update User"
