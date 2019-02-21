@@ -10,4 +10,8 @@
     color: $color;
     text-decoration: underline #aaa;
   }
+
+  &:visited {
+    color: $color;
+  }
 }
