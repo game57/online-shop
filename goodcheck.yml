@@ -1,0 +1,15 @@
+rules:
+  - id: game57.scss.use-basic-link-mixin
+    pattern: "color: #038cf4;"
+    message: |
+      Use `basic-link` mixin.
+
+      See https://github.com/game57/online-shop/blob/master/app/assets/stylesheets/mixins.scss
+    justification:
+      - When you write the mixin itself.
+    glob:
+      - "**/*.scss"
+    pass:
+      - "@include basic-link;"
+    fail:
+      - "color: #038cf4;"
