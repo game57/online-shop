@@ -1,0 +1,11 @@
+rules:
+  - id: game57.disallow_model_in_db_migrations
+    pattern:
+      - "_.update_all(...)"
+      - "_.delete_all(...)"
+      - "_.destroy_all(...)"
+      - "_.where(...)"
+    message: |
+      Disallow using model classes in DB migrations in our project.
+      
+      See https://github.com/game57/online-shop/pull/8#discussion_r257909501
